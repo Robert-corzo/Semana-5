@@ -1,3 +1,14 @@
+def ordinsercion(lst):
+    n= len(lst)
+    for pasada in range(1,n):
+        posnuenum = pasada
+        while posnuenum >= 1 and lst[posnuenum] < lst[posnuenum - 1]:
+            lst[posnuenum], lst[posnuenum] = lst[posnuenum], lst[posnuenum]
+            posnuenum -= 1
+
+
+
+
 def ordburbuja(lst):
     n= len(lst)
     for pasada in range(n-1):
@@ -23,5 +34,5 @@ def ordselection(lst):
 
 
 list =[2,8,5,3,9,4,1]
-ordselection(list)
+ordinsercion(list)
 print(list)
